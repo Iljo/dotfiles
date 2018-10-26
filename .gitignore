@@ -1,0 +1,40 @@
+# 
+# Ignore everything by default.
+*
+
+# X11 
+!.Xdefaults
+!.xinitrc
+
+# Bash stuff (profile just sources bashrc, since it's the only thing sourced
+# when a shell is a login shell).
+!.bash*
+.*.swp
+.bash_history
+.bash_local
+.bash_logout
+!.profile
+
+# Git 
+!.git-completion.bash
+!.gitignore
+
+# Vim
+!.vim
+!.vim/*
+!.vim/*/*
+!.vim/*/*/*
+!.vim/*/*/*/*
+!.vim/*/*/*/*/*
+!.vim/*/*/*/*/*/*
+# Do ignore netrw history
+.vim/.netrwhist
+# Do ignore vim-plug stuff, sigh
+.vim/plugged
+# Vim settings
+!.vimrc
+# Ignore swapfiles
+.vim/swap/*
+
+# Explicitly ignore other strange files, eg. Vim's backup files ;)
+*~
