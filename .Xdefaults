@@ -13,6 +13,8 @@
 #define t_blue #6699cc
 #define t_purple #cc99cc
 
+URxvt.font: xft:Ubuntu Mono:size=11
+
 *faceName: Ubuntu Mono
 *faceSize: 11
 
@@ -54,14 +56,14 @@
 
 *scrollBar: false
 
-#Xcursor.size: 42
+Xcursor.size: 48
 
 *VT100*translations: #override \n\
 Ctrl <Key> -: smaller-vt-font() \n\
 Ctrl <Key> +: larger-vt-font()
 
 Xft.dpi: 163
-#Xft.dpi: 210
-#Xft.dpi: 110
-#Xft.dpi: 123
+!Xft.dpi: 210
+!Xft.dpi: 110
+!Xft.dpi: 123
 
