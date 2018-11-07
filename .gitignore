@@ -36,5 +36,9 @@
 # Ignore swapfiles
 .vim/swap/*
 
+!.config
+!.config/i3
+!.config/i3/config
+
 # Explicitly ignore other strange files, eg. Vim's backup files ;)
 *~
