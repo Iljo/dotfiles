@@ -1,0 +1,4 @@
+configuration {
+    modi: "drun,window,run";
+    theme: "my-theme";
+}

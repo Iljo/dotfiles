@@ -1,0 +1,53 @@
+* {
+    foreground:			#cccccc;
+    background:			#2d2d2d;
+    selected-foreground:	#cccccc;
+
+    font:		"Ubuntu Mono 19";
+    text-color:  	@foreground;
+    background-color:	transparent;
+}
+#window {
+    padding:		10;		
+    background-color:	#3d3d3d88;
+    anchor:		center;
+    location:		center;
+}
+#inputbar {
+    padding:		10;		
+    background-color:	@background;
+    children:   	[entry, prompt];
+}
+#prompt {
+    margin:		0 10 0 0;
+}
+#listview {
+    padding:		5 0 10; // Something is wrong with border, that's why top padding is 5
+    background-color:	@background;
+    columns:		2;
+    border:       	10 0 0;
+    border-color: 	transparent;
+}
+#element {
+    padding: 1 10 1 ;
+}
+
+#element.normal.active {
+    text-color:		#65acff;
+}
+#element.normal.urgent {
+    text-color:		#cc6666;
+}
+#element.selected.normal {
+    text-color:		@selected-foreground;
+    background-color:	#688bc699;
+}
+#element.selected.active {
+    text-color:		@selected-foreground;
+    background-color:	#688bc699;
+}
+#element.selected.urgent {
+    text-color:		@selected-foreground;
+    background-color:	#a5424299;
+}
+
