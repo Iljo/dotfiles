@@ -45,5 +45,9 @@
 !.config/rofi/config.rasi
 !.config/rofi/my-theme.rasi
 
+!.config/polybar
+!.config/polybar/config
+!.config/polybar/launch.sh
+
 # Explicitly ignore other strange files, eg. Vim's backup files ;)
 *~
