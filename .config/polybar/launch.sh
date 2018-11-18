@@ -8,6 +8,6 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch the polybar
 for m in $(polybar -m | cut -d":" -f1); do
-    MONITOR=$m polybar --reload example &
+    MONITOR=$m polybar --reload bottom &
 done
 

@@ -13,9 +13,7 @@
 #define t_blue #6699cc
 #define t_purple #cc99cc
 
-URxvt.font: xft:Ubuntu Mono:size=11
-
-*faceName: Ubuntu Mono
+*faceName: UbuntuMono Nerd Font
 *faceSize: 11
 
 *foreground: t_foreground

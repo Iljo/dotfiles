@@ -44,7 +44,7 @@
 }
 #element.selected.active {
     text-color:		@selected-foreground;
-    background-color:	#688bc699;
+    background-color:	#65acff99;
 }
 #element.selected.urgent {
     text-color:		@selected-foreground;
