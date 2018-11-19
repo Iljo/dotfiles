@@ -49,5 +49,7 @@
 !.config/polybar/config
 !.config/polybar/launch.sh
 
+!.config/compton.conf
+
 # Explicitly ignore other strange files, eg. Vim's backup files ;)
 *~
