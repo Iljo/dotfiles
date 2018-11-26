@@ -12,4 +12,5 @@ xrandr --dpi 163 &
 #xrandr --dpi 123 &
 nitrogen --restore &
 xbindkeys &
+greenclip daemon &
 exec i3 
