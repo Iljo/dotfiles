@@ -155,3 +155,8 @@ focus_follows_mouse no
 # launch Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
