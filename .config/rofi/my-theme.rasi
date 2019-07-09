@@ -3,7 +3,7 @@
     background:			#2d2d2d;
     selected-foreground:	#cccccc;
 
-    font:		"Ubuntu Mono 18";
+    font:		"Ubuntu Mono 13";
     text-color:  	@foreground;
     background-color:	transparent;
 }

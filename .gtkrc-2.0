@@ -2,7 +2,7 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/iljo/.gtkrc-2.0.mine"
-gtk-theme-name="Mint-X-Aqua"
+gtk-theme-name="Mint-Y-Aqua"
 gtk-icon-theme-name="Mint-X-Orange"
 gtk-font-name="Ubuntu 9.5"
 gtk-cursor-theme-name="Bibata_Ice"

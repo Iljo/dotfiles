@@ -54,14 +54,14 @@
 
 *scrollBar: false
 
-Xcursor.size: 48
+Xcursor.size: 32
 
 *VT100*translations: #override \n\
 Ctrl <Key> -: smaller-vt-font() \n\
 Ctrl <Key> +: larger-vt-font()
 
-Xft.dpi: 163
+!Xft.dpi: 163
 !Xft.dpi: 210
-!Xft.dpi: 110
+Xft.dpi: 110
 !Xft.dpi: 123
 
