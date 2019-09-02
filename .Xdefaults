@@ -13,7 +13,7 @@
 #define t_blue #6699cc
 #define t_purple #cc99cc
 
-*faceName: UbuntuMono Nerd Font
+*faceName: Ubuntu Mono
 *faceSize: 11
 
 *foreground: t_foreground
@@ -64,4 +64,10 @@ Xft.dpi: 163
 !Xft.dpi: 210
 !Xft.dpi: 110
 !Xft.dpi: 123
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintslight
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
 
