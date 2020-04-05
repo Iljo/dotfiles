@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# If force-stop doesn't work, maybe `am kill` will
+# https://possiblemobile.com/2017/10/android-testing-app-killed-background/
+
+adb shell am force-stop $1

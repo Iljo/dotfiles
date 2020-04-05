@@ -65,6 +65,10 @@
 !.local
 !.local/bin
 !.local/bin/greenclip-clear
+!.local/bin/adb-backstack  
+!.local/bin/adb-ps  
+!.local/bin/adb-kill       
+!.local/bin/simple_stopwatch
 
 # Explicitly ignore other strange files, eg. Vim's backup files ;)
 *~
