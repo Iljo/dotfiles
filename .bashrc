@@ -10,7 +10,7 @@ alias tree='tree -C'
 alias grep='grep --color'
 alias dgit='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
-PS1='[\u@\h \W]\$ '
+PS1='\e[0;32m\u@\h\e[m \e[1;34m\W\e[m\e[1;33m $\e[m '
 
 export EDITOR=vim
 PATH=$PATH:~iljo/.local/bin:~iljo/Programming/android-sdk-linux/platform-tools:~iljo/Programming/android-sdk-linux/tools
