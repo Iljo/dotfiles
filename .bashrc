@@ -8,6 +8,8 @@
 alias ls='ls --color=auto'
 alias tree='tree -C'
 alias grep='grep --color'
+alias dgit='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
 PS1='[\u@\h \W]\$ '
 
 export EDITOR=vim
