@@ -2,13 +2,14 @@
 # ~/.bashrc
 #
 
+alias dgit='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
 alias tree='tree -C'
 alias grep='grep --color'
-alias dgit='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 PS1='\[\e[0;32m\]\u@\h\[\e[m\] \[\e[1;34m\]\W\[\e[m\]\[\e[1;33m\] $\[\e[m\] '
 

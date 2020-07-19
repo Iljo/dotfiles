@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+shopt -s expand_aliases 
+source ~/.bashrc
+cd
+
+extension="$HOSTNAME"
+files=`dgit ls-tree -r @ --name-only | sed -n "s/.$extension$//p"` 
+
+echo $files
+for file in $files
+do
+    rm "$file"
+    ln "$file.$extension" "$file"
+    ls -l --color "$file"
+done
+
