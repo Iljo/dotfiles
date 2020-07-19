@@ -61,4 +61,3 @@ Ctrl <Key> -: smaller-vt-font() \n\
 Ctrl <Key> +: larger-vt-font()
 
 Xft.dpi: 163
-

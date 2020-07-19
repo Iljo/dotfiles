@@ -88,4 +88,6 @@ set autowrite
 set shiftwidth=4
 set notimeout ttimeout ttimeoutlen=25
 set nowrap
+" hi CursorLine   cterm=NONE ctermbg=7
+" set cursorline
 

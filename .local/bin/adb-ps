@@ -1,0 +1,4 @@
+#!/bin/bash
+
+adb shell ps | head -1 && adb shell ps | grep --color $1
+
