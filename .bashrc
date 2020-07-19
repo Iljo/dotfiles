@@ -30,8 +30,3 @@ man() {
 
 source  ~/.git-completion.bash
 
-# These variables are reflected to xsession because we start x from the bash. So bash is the parent process of X session, 
-# and child processes inherit environment variables from their parents
-#export GDK_SCALE=1.6
-#export GDK_DPI_SCALE=1.6
-#export QT_AUTO_SCREEN_SCALE_FACTOR=1
