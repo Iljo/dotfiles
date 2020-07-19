@@ -4,3 +4,4 @@
 # https://possiblemobile.com/2017/10/android-testing-app-killed-background/
 
 adb shell am force-stop $1
+

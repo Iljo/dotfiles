@@ -61,9 +61,6 @@ Ctrl <Key> -: smaller-vt-font() \n\
 Ctrl <Key> +: larger-vt-font()
 
 Xft.dpi: 163
-!Xft.dpi: 210
-!Xft.dpi: 110
-!Xft.dpi: 123
 Xft.autohint: 0
 Xft.lcdfilter: lcddefault
 Xft.hintstyle: hintslight
