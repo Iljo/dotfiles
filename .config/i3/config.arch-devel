@@ -11,6 +11,8 @@
 #--------------- Customisation -----------------
 for_window [title="Game"] floating enable
 for_window [class="Pidgin"] floating enable
+for_window [class="mpv"] floating enable
+for_window [instance="Godot_Engine"] floating enable
 
 # class                 border  bground text    indicator child_border
 #client.focused          #014B86 #01579B #FFFFFF #2E9EF4   #285577
