@@ -54,7 +54,7 @@
 
 *scrollBar: false
 
-Xcursor.size: 48
+Xcursor.size: 42
 
 *VT100*translations: #override \n\
 Ctrl <Key> -: smaller-vt-font() \n\

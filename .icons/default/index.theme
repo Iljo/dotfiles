@@ -2,5 +2,4 @@
 [Icon Theme]
 Name=Default
 Comment=Default Cursor Theme
-Inherits=Bibata_Ice
-
+Inherits=Bibata-Modern-Ice
