@@ -9,7 +9,7 @@ files=`dgit ls-tree -r @ --name-only | sed -n "s/.$extension$//p"`
 echo $files
 for file in $files
 do
-    rm "$file"
+    rm -f "$file"
     ln "$file.$extension" "$file"
     ls -l --color "$file"
 done

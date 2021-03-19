@@ -14,7 +14,7 @@ alias grep='grep --color'
 PS1='\[\e[0;32m\]\u@\h\[\e[m\] \[\e[1;34m\]\W\[\e[m\]\[\e[1;33m\] $\[\e[m\] '
 
 export EDITOR=vim
-PATH=$PATH:~iljo/.local/bin:~iljo/Programming/android-sdk/platform-tools:~iljo/Programming/android-sdk/tools
+PATH=$PATH:~/.local/bin:~/Programming/android-sdk/platform-tools:~/Programming/android-sdk/tools
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 export PATH
 
