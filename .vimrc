@@ -99,3 +99,8 @@ let g:netrw_altv = 1
 let g:netrw_winsize=25        " width of window
 let g:netrw_preview=1
 augroup ProjectDrawer autocmd!  autocmd VimEnter * :Vexplore augroup END
+
+" Mappings
+" TODO Make different mappings of the same file based on the extension
+map <M-X> :!groff -mspdf -T pdf % > %:r.pdf <CR>
+imap Ø    <Esc> :!groff -mspdf -T pdf % > %:r.pdf <CR>
