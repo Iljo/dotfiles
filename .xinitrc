@@ -1,5 +1,5 @@
 xset b off &
-compton &
+picom --xrender-sync-fence &
 xrdb -merge ~/.Xdefaults &
 xrandr --dpi 163 &
 nitrogen --restore &
