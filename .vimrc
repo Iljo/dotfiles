@@ -102,5 +102,9 @@ augroup ProjectDrawer autocmd!  autocmd VimEnter * :Vexplore augroup END
 
 " Mappings
 " TODO Make different mappings of the same file based on the extension
-map <M-X> :!groff -mspdf -T pdf % > %:r.pdf <CR>
-imap Ø    <Esc> :!groff -mspdf -T pdf % > %:r.pdf <CR>
+" map <M-X> :!groff -mspdf -T pdf % > %:r.pdf <CR>
+" imap Ø    <Esc> :!groff -mspdf -T pdf % > %:r.pdf <CR>
+map <M-X>    :!pandoc % -V geometry:a4paper --number-sections --top-level-division=chapter --template custom.latex -s -o %:r.tex && lualatex %:r.tex <CR>
+imap Ø <Esc> :!pandoc % -V geometry:a4paper --number-sections --top-level-division=chapter --template custom.latex -s -o %:r.tex && lualatex %:r.tex <CR>
+map <F10>        :!pandoc % -V geometry:a4paper --number-sections --top-level-division=chapter --template custom.latex -s -t latex \| pdflatex --jobname=%:r <CR>
+imap <F10> <ESC> :!pandoc % -V geometry:a4paper --number-sections --top-level-division=chapter --template custom.latex -s -t latex \| pdflatex --jobname=%:r <CR>
