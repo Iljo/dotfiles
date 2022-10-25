@@ -13,12 +13,14 @@ for_window [title="Game"] floating enable
 for_window [class="Pidgin"] floating enable
 for_window [class="mpv"] floating enable
 for_window [instance="Godot_Engine"] floating enable
+for_window [instance="LearnOpenGL"] floating enable
 
 # class                 border  bground text    indicator child_border
 client.focused          #A6714B #CC7739 #000000 #A6714B   #CC7739
 
 default_border pixel 1
 default_floating_border pixel 2
+for_window [class="^.*"] border pixel 1
 
 hide_edge_borders smart
 
