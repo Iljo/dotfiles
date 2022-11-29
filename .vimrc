@@ -83,13 +83,12 @@ endif
 " ---------------------------------------------------------------------------
 " Filetype dection by extension is in ~/.vim/filetype.vim
 
-colorscheme pablo
+colorscheme origpablomod
 set autowrite
 set shiftwidth=4
 set notimeout ttimeout ttimeoutlen=25
 set nowrap
-" hi CursorLine   cterm=NONE ctermbg=7
-" set cursorline
+set cursorline
 
 " file exploration menu settings
 let g:netrw_banner = 0        " remove directions at top of file listing
@@ -102,9 +101,37 @@ augroup ProjectDrawer autocmd!  autocmd VimEnter * :Vexplore augroup END
 
 " Mappings
 " TODO Make different mappings of the same file based on the extension
+" Old Groff mappings
 " map <M-X> :!groff -mspdf -T pdf % > %:r.pdf <CR>
 " imap Ø    <Esc> :!groff -mspdf -T pdf % > %:r.pdf <CR>
 map <M-X>    :!pandoc % -V geometry:a4paper --number-sections --top-level-division=chapter --template custom.latex -s -o %:r.tex && lualatex %:r.tex <CR>
 imap Ø <Esc> :!pandoc % -V geometry:a4paper --number-sections --top-level-division=chapter --template custom.latex -s -o %:r.tex && lualatex %:r.tex <CR>
 map <F10>        :!pandoc % -V geometry:a4paper --number-sections --top-level-division=chapter --template custom.latex -s -t latex \| pdflatex --jobname=%:r <CR>
 imap <F10> <ESC> :!pandoc % -V geometry:a4paper --number-sections --top-level-division=chapter --template custom.latex -s -t latex \| pdflatex --jobname=%:r <CR>
+
+" Set autoindent so that list items longer than 2 lines have forrect
+" indentation
+set ai
+
+" TODO Doesn't work on correctly. Maybe it's xterm or font? In alacritty it works,
+" but is it because it can modify the font?
+" Strange because  printf "\e[3mfoo\e[23m" prints itallic font
+" But neovim in xterm works good with this
+set conceallevel=2
+
+" TODO Headding 1 and 2 are not correctly formatted without this one. Why doesnt it work
+" when set in vimrc, only when executed directly. Maybe after this vimrc is
+" executed, vim executes it's own thing depending on the filetype.
+set comments+=n:==,n:--
+
+" Wrapping 
+set nowrap
+set textwidth=100
+set colorcolumn=101
+set whichwrap+=<,>,h,l
+
+" TODO kotlin?
+let g:markdown_fenced_languages=['java']
+
+" Show invisible characters
+
