@@ -88,7 +88,10 @@ set autowrite
 set shiftwidth=4
 set notimeout ttimeout ttimeoutlen=25
 set nowrap
-set cursorline
+if $TERM != "xterm-256color" 
+    set cursorline
+    set colorcolumn=101
+endif
 
 " file exploration menu settings
 let g:netrw_banner = 0        " remove directions at top of file listing
@@ -127,7 +130,6 @@ set comments+=n:==,n:--
 " Wrapping 
 set nowrap
 set textwidth=100
-set colorcolumn=101
 set whichwrap+=<,>,h,l
 
 " TODO kotlin?
