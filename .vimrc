@@ -127,6 +127,10 @@ set conceallevel=2
 " executed, vim executes it's own thing depending on the filetype.
 set comments+=n:==,n:--
 
+" Line numbers
+set nu
+set rnu
+
 " Wrapping 
 set nowrap
 set textwidth=100
@@ -136,4 +140,6 @@ set whichwrap+=<,>,h,l
 let g:markdown_fenced_languages=['java']
 
 " Show invisible characters
+set list
+set listchars=tab:»_,trail:·
 
