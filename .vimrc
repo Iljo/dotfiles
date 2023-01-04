@@ -136,8 +136,7 @@ set nowrap
 set textwidth=100
 set whichwrap+=<,>,h,l
 
-" TODO kotlin?
-let g:markdown_fenced_languages=['java']
+let g:markdown_fenced_languages=['java', 'kotlin']
 
 " Show invisible characters
 set list
