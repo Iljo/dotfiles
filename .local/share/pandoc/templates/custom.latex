@@ -303,6 +303,7 @@ $highlighting-macros$
 % code-block-font-size idea from Wandalfarbe
 % https://github.com/Wandmalfarbe/pandoc-latex-template/commit/a24f339d6c67d0b12aaf2aabddfb3008814a11f8#
 \RecustomVerbatimEnvironment{Highlighting}{Verbatim}{frame=leftline,framesep=4mm,framerule=0.2pt,fontsize=$if(code-block-font-size)$$code-block-font-size$$else$\small$endif$,commandchars=\\\{\}}
+\RecustomVerbatimEnvironment{verbatim}{Verbatim}{frame=leftline,framesep=4mm,framerule=0.2pt,fontsize=$if(code-block-font-size)$$code-block-font-size$$else$\small$endif$,commandchars=\\\{\}}
 $endif$
 $if(tables)$
 \usepackage{longtable,booktabs,array}

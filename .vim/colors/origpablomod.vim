@@ -27,7 +27,7 @@ highlight Search	      		    ctermbg=3							 guibg=#c0c000
 highlight Visual   			        ctermbg=7
 highlight ColorColumn   			ctermbg=236
 highlight CursorLine                ctermbg=236 cterm=none
-highlight LineNr       ctermfg=7                cterm=none
-highlight CursorLineNr ctermfg=7                cterm=none
+highlight LineNr       ctermfg=8                cterm=none
+highlight CursorLineNr ctermfg=8                cterm=none
 highlight SpecialKey   ctermfg=11   ctermbg=0
 
