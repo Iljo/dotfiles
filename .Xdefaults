@@ -1,9 +1,9 @@
 !TomorrowNightEighties
 
 #define t_background #2d2d2d
-#define t_current_line #393939
+#define t_current_line #333333
 #define t_selection #515151
-#define t_foreground #cccccc
+#define t_foreground #d2d2d2
 #define t_comment #999999
 #define t_red #f2777a
 #define t_orange #f99157
@@ -13,8 +13,9 @@
 #define t_blue #6699cc
 #define t_purple #cc99cc
 
-*faceName: Ubuntu Mono
-*faceSize: 11
+*faceName: JetBrains Mono
+*faceSize: 9
+*scaleHeight: 0.95
 
 *foreground: t_foreground
 *background: t_background
@@ -22,7 +23,7 @@
 
 !Black / Grey
 *color0: #000000
-*color8: #666666
+*color8: #818689
 
 !Red / Bright Red
 *color1: t_red

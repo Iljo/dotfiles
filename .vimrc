@@ -88,7 +88,7 @@ set autowrite
 set shiftwidth=4
 set notimeout ttimeout ttimeoutlen=25
 set nowrap
-if $TERM != "xterm-256color" 
+if $TERMINAL_EMULATOR != "JetBrains-JediTerm" " Maybe read terminal-info for more options
     set cursorline
     set colorcolumn=101
 endif
@@ -102,15 +102,19 @@ let g:netrw_winsize=25        " width of window
 let g:netrw_preview=1
 augroup ProjectDrawer autocmd!  autocmd VimEnter * :Vexplore augroup END
 
+" Fix meta-keys for vim and alacritty that doesn't support modifyOtherKeys of level 2. Strangely
+" neovim wirks quite fine in alacritty.
+if !has("nvim") && &term ==? "alacritty"
+    set <M-X>=X
+endif
+
 " Mappings
 " TODO Make different mappings of the same file based on the extension
-" Old Groff mappings
 " map <M-X> :!groff -mspdf -T pdf % > %:r.pdf <CR>
-" imap Ø    <Esc> :!groff -mspdf -T pdf % > %:r.pdf <CR>
-map <M-X>    :!pandoc % -V geometry:a4paper --number-sections --top-level-division=chapter --template custom.latex -s -o %:r.tex && lualatex %:r.tex <CR>
-imap Ø <Esc> :!pandoc % -V geometry:a4paper --number-sections --top-level-division=chapter --template custom.latex -s -o %:r.tex && lualatex %:r.tex <CR>
-map <F10>        :!pandoc % -V geometry:a4paper --number-sections --top-level-division=chapter --template custom.latex -s -t latex \| pdflatex --jobname=%:r <CR>
-imap <F10> <ESC> :!pandoc % -V geometry:a4paper --number-sections --top-level-division=chapter --template custom.latex -s -t latex \| pdflatex --jobname=%:r <CR>
+map <M-X>       :!pandoc % -V geometry:a4paper --number-sections --top-level-division=chapter --template custom.latex -s -o %:r.tex && lualatex %:r.tex <CR>
+imap <M-X> <Esc>:!pandoc % -V geometry:a4paper --number-sections --top-level-division=chapter --template custom.latex -s -o %:r.tex && lualatex %:r.tex <CR>
+map <F10>       :!pandoc % -V geometry:a4paper --number-sections --top-level-division=chapter --template custom.latex -s -t latex \| pdflatex --jobname=%:r <CR>
+imap <F10> <ESC>:!pandoc % -V geometry:a4paper --number-sections --top-level-division=chapter --template custom.latex -s -t latex \| pdflatex --jobname=%:r <CR>
 
 " Set autoindent so that list items longer than 2 lines have forrect
 " indentation
@@ -120,6 +124,7 @@ set ai
 " but is it because it can modify the font?
 " Strange because  printf "\e[3mfoo\e[23m" prints itallic font
 " But neovim in xterm works good with this
+" The problem is my vimrc and setting colorscheme. If it's not set we get bold text.
 set conceallevel=2
 
 " TODO Headding 1 and 2 are not correctly formatted without this one. Why doesnt it work

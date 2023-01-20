@@ -1,0 +1,34 @@
+colors:
+  bright:
+    black: '#818689'
+    blue: '#6699cc'
+    cyan: '#54ced6'
+    green: '#9ec400'
+    magenta: '#b777e0'
+    red: '#FF3334'
+    white: '#333333'
+    yellow: '#f99157'
+  normal:
+    black: '#000000'
+    blue: '#6699cc'
+    cyan: '#66cccc'
+    green: '#99cc99'
+    magenta: '#cc99cc'
+    red: '#f2777a'
+    white: '#515151'
+    yellow: '#ffcc66'
+  primary:
+    background: '#2d2d2d'
+    foreground: '#d2d2d2'
+font:
+  normal:
+    family: JetBrains Mono
+    style: Regular
+  offset:
+    x: -1
+    y: -2
+  size: 9.5
+window:
+  padding:
+    x: 2
+    y: 2
