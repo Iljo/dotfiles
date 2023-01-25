@@ -13,9 +13,9 @@
 #define t_blue #6699cc
 #define t_purple #cc99cc
 
-*faceName: JetBrains Mono
+*faceName: Hack
 *faceSize: 9
-*scaleHeight: 0.95
+*scaleHeight: 1.05
 
 *foreground: t_foreground
 *background: t_background

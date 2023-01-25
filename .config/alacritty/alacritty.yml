@@ -21,12 +21,14 @@ colors:
     background: '#2d2d2d'
     foreground: '#d2d2d2'
 font:
+  italic:
+    style: Medium Oblique
   normal:
-    family: JetBrains Mono
-    style: Regular
+    family: VictorMono Nerd Font Mono
+    style: Medium
   offset:
-    x: -1
-    y: -2
+    x: 0
+    y: -5
   size: 9.5
 window:
   padding:
