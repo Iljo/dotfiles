@@ -141,7 +141,7 @@ set nowrap
 set textwidth=100
 set whichwrap+=<,>,h,l
 
-let g:markdown_fenced_languages=['java', 'kotlin']
+let g:markdown_fenced_languages=['java', 'kotlin', 'sh', 'bash', 'vim']
 
 " Show invisible characters
 set list

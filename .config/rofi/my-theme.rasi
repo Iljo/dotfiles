@@ -1,11 +1,12 @@
 * {
     foreground:			#cccccc;
-    background:			#2d2d2d;
-    selected-foreground:	#cccccc;
+    background:			#292929;
+    selected-foreground:	#000000;
 
-    font:		"Ubuntu Mono 19";
+    font:		"Ubuntu Mono 18.5";
     text-color:  	@foreground;
     background-color:	transparent;
+    highlight:		bold;
 }
 #window {
     padding:		7;		
@@ -32,15 +33,21 @@
     padding: 1 10 1 ;
 }
 
+#element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
 #element.normal.active {
     text-color:		#65acff;
 }
 #element.normal.urgent {
     text-color:		#cc6666;
 }
+
 #element.selected.normal {
     text-color:		@selected-foreground;
-    background-color:	#688bc699;
+    background-color:	#cc7739ee;
 }
 #element.selected.active {
     text-color:		@selected-foreground;

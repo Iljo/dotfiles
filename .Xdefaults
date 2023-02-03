@@ -13,9 +13,9 @@
 #define t_blue #6699cc
 #define t_purple #cc99cc
 
-*faceName: Hack
-*faceSize: 9
-*scaleHeight: 1.05
+*faceName: Ubuntu Mono
+*faceSize: 11
+*scaleHeight: 1.0
 
 *foreground: t_foreground
 *background: t_background
