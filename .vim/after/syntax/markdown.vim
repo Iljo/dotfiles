@@ -1,5 +1,7 @@
-" Markdown code block background that works on the fenced languages also
-" Mix of the code from thowse two sources:
+" Markdown code block background that works on the fenced languages also.
+" Maybe it would be good to put the MarkdownBlocks function and the call to ftplugin directory, just
+" so that it would be executed after the original markdown ftplugin.
+" Took the code fromt the following sources.
 " https://vi.stackexchange.com/questions/25781/how-to-change-background-color-for-markdowns-fenced-code-blocks
 " https://www.reddit.com/r/vim/comments/fob3sg/different_background_color_for_markdown_code/
 
@@ -36,4 +38,8 @@ function! s:place_signs()
 endfunction
 
 call MarkdownBlocks()
+
+" Conceal links. Just coppied the original Tim Pope's syntax and added concealends and conceal.
+syn region markdownLinkText matchgroup=markdownLinkTextDelimiter start="!\=\[\%(\_[^][]*\%(\[\_[^][]*\]\_[^][]*\)*]\%( \=[[(]\)\)\@=" end="\]\%( \=[[(]\)\@=" nextgroup=markdownLink,markdownId skipwhite contains=@markdownInline,markdownLineStart concealends
+syn region markdownLink matchgroup=markdownLinkDelimiter start="(" end=")" contains=markdownUrl keepend contained conceal
 
