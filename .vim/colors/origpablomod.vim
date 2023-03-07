@@ -32,9 +32,10 @@ highlight CursorLineNr ctermfg=8                cterm=none
 highlight SpecialKey   ctermfg=11   ctermbg=0
 
 highlight markdownCode				ctermbg=234
-highlight codeBlockBackground		ctermbg=235
+highlight markdownCodeBlockBg		ctermbg=235
 
 " After highlight clearing, define colors that don't have highlighting.
 if exists("syntax_on")
   syntax enable
 endif
+
