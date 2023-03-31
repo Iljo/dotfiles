@@ -1,6 +1,6 @@
 colors:
   bright:
-    black: '#7a7f9a'
+    black: '#8a8fac'
     blue: '#6699cc'
     cyan: '#34bfb0'
     green: '#9ec400'
@@ -26,7 +26,7 @@ font:
     style: ExtraBold
   italic:
     family: JetBrains Mono
-    style: Medium Italic
+    style: Italic
   normal:
     family: JetBrains Mono
     style: Medium
