@@ -22,13 +22,13 @@ colors:
     foreground: '#c2c2c2'
 font:
   Bold:
-    family: JetBrains Mono
+    family: JetBrainsMono Nerd Font
     style: ExtraBold
   italic:
-    family: JetBrains Mono
+    family: JetBrainsMono Nerd Font
     style: Italic
   normal:
-    family: JetBrains Mono
+    family: JetBrainsMono Nerd Font
     style: Medium
   offset:
     x: 0
