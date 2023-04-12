@@ -147,3 +147,9 @@ let g:markdown_fenced_languages=['java', 'kotlin', 'sh', 'bash', 'vim']
 set list
 set listchars=tab:»_,trail:·
 
+" Always show statusline in Vim and in NeoVim use globalstatusline
+if !has("nvim")
+    set laststatus=2
+else
+    set laststatus=3
+endif
