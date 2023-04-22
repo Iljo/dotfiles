@@ -1,0 +1,25 @@
+#!/bin/env bash
+
+print_color() {
+    printf "\e[48;5;${1}m %$2s \e[0m" $1
+    if [ $(expr $(expr $1 - 15) % $3) -eq 0 ]; then echo; fi;
+}
+
+echo
+
+# Relative 16 ANSI colors
+for i in {0..15}
+do
+    print_color $i 4 8
+done
+
+echo
+
+# Absolute colors
+for i in {16..255}
+do
+    print_color $i 6 6
+done
+
+echo
+
