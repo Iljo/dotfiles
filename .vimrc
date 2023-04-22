@@ -83,7 +83,7 @@ endif
 " ---------------------------------------------------------------------------
 " Filetype dection by extension is in ~/.vim/filetype.vim
 
-colorscheme origpablomod
+colorscheme dim
 set autowrite
 set shiftwidth=4
 set notimeout ttimeout ttimeoutlen=25

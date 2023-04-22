@@ -5,27 +5,27 @@
 # https://jeffkreeftmeijer.com/vim-16-color/
 
 colors:
-  normal:
-    black: '#212F36'
-    blue: '#7BAAFC' # blue: '#6B9DFF' # blue: '#0961C4'
-    cyan: '#5AB8C5'
-    green: '#76D876'
-    magenta: '#D882D9'
-    red: '#FF6569'
-    white: '#B1BFC5' # white: '#8B99A5'
-    yellow: '#FFC634'
   bright:
-    black: '#4B595F'
-    blue: '#9BCDFF'
-    cyan: '#64EfE0'
+    black: '#8B99A5' # black: '#4B595F'
+    blue: '#49A1FF'
+    cyan: '#45BDCA'
     green: '#8CEF90'
-    magenta: '#F8B2E9'
+    magenta: '#FFD7FF'
     red: '#FF7579'
     white: '#F3FBFF'
     yellow: '#FFEA43'
+  normal:
+    black: '#000000' # black: '#313F46'
+    blue: '#6B9DFF' # blue: '#0961C4'
+    cyan: '#58B6C3'
+    green: '#76D876'
+    magenta: '#D862D9'
+    red: '#FF6569'
+    white: '#B1BFC5'
+    yellow: '#FFC634'
   primary:
     background: '#313F46'
-    foreground: '#E3EBEF'
+    foreground: '#F3FBFF'
 font:
   Bold:
     family: JetBrainsMono Nerd Font
