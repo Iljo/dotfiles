@@ -10,26 +10,26 @@
 
 colors:
   normal:
-    black: '#0E1B02'
+    black: '#F3FBFF'
+    red: '#FA76A3'
+    green: '#8CEF90'
+    yellow: '#FFD634'
+    blue: '#59B1FF' 
+    magenta: '#FAACFE'
+    cyan: '#68D0D3'
+    white: '#4A595F'
+  bright:
+    black: '#A1AFC5'
     red: '#bb0000'
     green: '#008000'
     yellow: '#aa5000'
-    blue: '#1040AA' 
-    magenta: '#8A0A8F'
+    blue: '#2020BB' 
+    magenta: '#552850'
     cyan: '#067D8A'
-    white: '#D7D7CF'
-  bright:
-    black: '#848280'
-    red: '#f2777a'
-    green: '#99cc99'
-    yellow: '#ffcc66'
-    blue: '#6099cf'
-    magenta: '#FFD7FF'
-    cyan: '#55bbbb'
-    white: '#F1F0E9'
+    white: '#25333B'
   primary:
-    background: '#FDFCF5'
-    foreground: '#16230A'
+    foreground: '#E3EBEF'
+    background: '#313F46'
 font:
   Bold:
     family: JetBrainsMono Nerd Font

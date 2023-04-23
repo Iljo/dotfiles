@@ -83,13 +83,15 @@ endif
 " ---------------------------------------------------------------------------
 " Filetype dection by extension is in ~/.vim/filetype.vim
 
-colorscheme dim
+" set background=light
+colorscheme devlight
+
 set autowrite
 set shiftwidth=4
 set notimeout ttimeout ttimeoutlen=25
 set nowrap
 if $TERMINAL_EMULATOR != "JetBrains-JediTerm" " Maybe read terminal-info for more options
-    set cursorline
+    " set cursorline
     set colorcolumn=101
 endif
 

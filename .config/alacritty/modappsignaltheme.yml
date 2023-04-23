@@ -3,6 +3,10 @@
 #
 # https://github.com/jeffkreeftmeijer/appsignal.terminal 
 # https://jeffkreeftmeijer.com/vim-16-color/
+#
+# Somehow creazy idea:
+# - For dark theme switch normal and bright, then fix Vim theme accordingly.
+# - For light theme keep original colors, and maybe do a little fixup if needed on them.
 
 colors:
   normal:
@@ -17,7 +21,7 @@ colors:
   bright:
     black: '#4B595F'
     blue: '#9BCDFF'
-    cyan: '#64EfE0'
+    cyan: '#54DfD0'
     green: '#8CEF90'
     magenta: '#F8B2E9'
     red: '#FF7579'
