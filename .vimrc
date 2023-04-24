@@ -118,6 +118,10 @@ imap <M-X> <Esc>:!pandoc % -V geometry:a4paper --number-sections --top-level-div
 map <F10>       :!pandoc % -V geometry:a4paper --number-sections --top-level-division=chapter --template custom.latex -s -t latex \| pdflatex --jobname=%:r <CR>
 imap <F10> <ESC>:!pandoc % -V geometry:a4paper --number-sections --top-level-division=chapter --template custom.latex -s -t latex \| pdflatex --jobname=%:r <CR>
 
+map K      :lua vim.diagnostic.open_float() <CR>
+map <M-CR> :lua vim.lsp.buf.code_action() <CR>
+
+
 " Set autoindent so that list items longer than 2 lines have forrect
 " indentation
 set ai
