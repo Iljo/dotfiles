@@ -21,10 +21,10 @@ colors:
   bright:
     black: '#848280'
     red: '#f2777a'
-    green: '#99cc99'
+    green: '#E1ECE3'
     yellow: '#ffcc66'
     blue: '#6099cf'
-    magenta: '#FFD7FF'
+    magenta: '#EFE8F7'
     cyan: '#55bbbb'
     white: '#F1F0E9'
   primary:

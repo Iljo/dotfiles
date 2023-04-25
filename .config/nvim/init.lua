@@ -1,8 +1,21 @@
-vim.lsp.start({
-  name = 'LTeX Language Server',
-  cmd = {'ltex-ls'},
-  root_dir = vim.fs.dirname(vim.fs.find({'.git'}, { upward = true })[1]),
+-- LSP
+
+local lspconfig = require('lspconfig')
+lspconfig.ltex.setup{
+   settings = {
+        ltex = {
+            language = "en-US"
+        }
+    },
+}
+vim.api.nvim_create_autocmd("LspAttach", {
+    callback = function(args)
+        print("Attached buffer", args.buf, "to LSP client", args.data.client_id)
+    end
 })
+
+
+-- Use Vim configuration
 
 vim.cmd('source ~/.config/nvim/vimscript-transition.vim')
 
