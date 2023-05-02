@@ -18,6 +18,7 @@ hi LineNrBelow               ctermfg=8     ctermbg=15    cterm=italic
 hi CursorColumn              ctermfg=none  ctermbg=15    cterm=none
 hi CursorLine                ctermfg=none  ctermbg=15    cterm=none
 hi CursorLineNr              ctermfg=0     ctermbg=7     cterm=italic
+hi SignColumn                ctermfg=none  ctermbg=none  cterm=none
 
 hi Pmenu                     ctermfg=0     ctermbg=13    cterm=none
 
@@ -29,6 +30,8 @@ hi Special                   ctermfg=4     ctermbg=none  cterm=none
 hi Search                    ctermfg=16    ctermbg=220   cterm=none
 hi Underlined                ctermfg=6     ctermbg=none  cterm=underline
 
+hi SpellBad                  ctermfg=none  ctermbg=none  cterm=undercurl  guisp=#D700F7
+
 hi DiagnosticHint            ctermfg=8
 hi DiagnosticOk              ctermfg=2
 hi DiagnosticUnderlineError                              cterm=undercurl
@@ -36,6 +39,7 @@ hi DiagnosticUnderlineWarn                               cterm=undercurl
 hi DiagnosticUnderlineInfo                               cterm=undercurl  guisp=#0087D7
 hi DiagnosticUnderlineHint                               cterm=undercurl
 hi DiagnosticUnderlineOk                                 cterm=undercurl
+
 
 hi markdownCode              ctermfg=none  ctermbg=15    cterm=none
 hi markdownCodeBlockBg       ctermfg=none  ctermbg=15    cterm=none

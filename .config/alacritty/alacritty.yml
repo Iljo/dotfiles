@@ -17,18 +17,18 @@ colors:
     blue: '#1040AA' 
     magenta: '#8A0A8F'
     cyan: '#067D8A'
-    white: '#E1E1D5'
+    white: '#D7D7CF'
   bright:
     black: '#848280'
     red: '#f2777a'
     green: '#E1ECE3'
     yellow: '#ffcc66'
-    blue: '#6099cf'
+    blue: '#BBDEFB'
     magenta: '#EFE8F7'
     cyan: '#55bbbb'
-    white: '#F5F4EE'
+    white: '#F1F0E9'
   primary:
-    background: '#FEFDFC'
+    background: '#FDFCF5'
     foreground: '#16230A'
 font:
   Bold:
