@@ -1,12 +1,16 @@
 -- LSP
 
 local git_dirname = vim.fs.dirname(vim.fs.find({'.git'}, { upward = true })[1]) 
-local lspconfig = require('lspconfig')
+local language_identifiers = {"html", "tex", "latex", "markdown", "gitcommit"}
 
+local lspconfig = require('lspconfig')
 lspconfig.ltex.setup {
+    autostart = false,
+    filetypes = language_identifiers,
     settings = {
         ltex = {
-            language = "en-US"
+            language = "en-US",
+            enabled = language_identifiers,
         }
     },
     on_attach = function(client, bufnr) 
