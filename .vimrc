@@ -153,9 +153,13 @@ let g:markdown_fenced_languages=['java', 'kotlin', 'sh', 'bash', 'vim']
 set list
 set listchars=tab:»_,trail:·
 
-" Always show statusline in Vim and in NeoVim use globalstatusline
-if !has("nvim")
-    set laststatus=2
-else
+" Use globalstatusline in NeoVim and always use statusline in Vim.
+" In order for undercurl to work in Vim, setup termcap entries.
+if has("nvim")
     set laststatus=3
+else
+    set laststatus=2
+    let &t_Cs = "\e[4:3m"
+    let &t_Ce = "\e[4:0m"
 endif
+
