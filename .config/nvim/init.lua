@@ -24,9 +24,9 @@ lspconfig.ltex.setup {
             -- FIXME Why does ltex_extra use path only from first buffer on which it was set up.
             --       Looks like it uses relative path, but still...
             --       https://github.com/barreiroleo/ltex_extra.nvim/blob/3ceb2401ab70c132305b3dba4dcb418d97b567ad/lua/ltex_extra/init.lua#L7
-	    --       Maybe this variable should be changed to function
-	    --       https://github.com/barreiroleo/ltex_extra.nvim/blob/3ceb2401ab70c132305b3dba4dcb418d97b567ad/lua/ltex_extra/utils/fs.lua#L2
-            path = git_dirname_or_home(vim.api.nvim_buf_get_name(bufnr)) .. "/.spell" 
+            --       Maybe this variable should be changed to function
+            --       https://github.com/barreiroleo/ltex_extra.nvim/blob/3ceb2401ab70c132305b3dba4dcb418d97b567ad/lua/ltex_extra/utils/fs.lua#L2
+            path = git_dirname_or_home(vim.api.nvim_buf_get_name(bufnr)) .. "/.spell/ltex" 
         }
     end
 }

@@ -163,3 +163,39 @@ else
     let &t_Ce = "\e[4:0m"
 endif
 
+
+" ------------
+" - Spelling -
+" ------------
+
+function s:CustomSpellDirectory() 
+    let git_or_home_dir = finddir('.git/..', expand('%:p:h').';')
+    if len(git_or_home_dir) == 0 | let git_or_home_dir = "~" | endif
+    let git_or_home_dir = fnamemodify(git_or_home_dir, ':p')
+
+    return git_or_home_dir .. '.spell/vim/'
+endfunction
+"
+" Set spellfile per git project or default to home directory. Function is needed so that spellfile
+" option can be set per buffer.
+function s:CustomSpellFile()
+    let dname = s:CustomSpellDirectory()
+    let fname = &spelllang .. '.' .. &enc .. '.add'
+
+    return dname .. fname
+endfunction
+
+function s:CreateCustomSpellDir() 
+    let dname = s:CustomSpellDirectory()
+    if empty(glob(dname))
+        call mkdir(dname, "p")
+    endif
+endfunction
+
+" Not gonna automatically create custom spell directory anymore, don't want that directory to always
+" be present, for every file it's opened. There is no event that is triggered when spelling is
+" activated, or spellfile is missing. So use this command to automatically create needed directory.
+command CreateCustomSpellDir call s:CreateCustomSpellDir()
+
+au BufEnter * let &l:spellfile=s:CustomSpellFile()
+
