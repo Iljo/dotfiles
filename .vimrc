@@ -163,6 +163,7 @@ else
     let &t_Ce = "\e[4:0m"
 endif
 
+setlocal scrolloff=1
 
 " ------------
 " - Spelling -
