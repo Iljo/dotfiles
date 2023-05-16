@@ -1,3 +1,11 @@
+-- Diagnostic
+
+vim.diagnostic.config({ 
+    virtual_text = false,
+    update_in_insert = false
+})
+
+
 -- LSP
 
 function git_dirname_or_home(startpath)

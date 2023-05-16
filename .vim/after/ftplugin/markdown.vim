@@ -4,7 +4,7 @@
 " https://www.reddit.com/r/vim/comments/fob3sg/different_background_color_for_markdown_code/
 
 function! MarkdownBlocks() abort " {{{1
-  setlocal signcolumn=no
+  " setlocal signcolumn=no
 
   sign define codeblock linehl=markdownCodeBlockBg
 

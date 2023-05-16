@@ -163,7 +163,8 @@ else
     let &t_Ce = "\e[4:0m"
 endif
 
-setlocal scrolloff=1
+set scrolloff=1
+set signcolumn=no
 
 " ------------
 " - Spelling -
