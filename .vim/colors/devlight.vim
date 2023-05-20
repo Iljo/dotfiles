@@ -39,10 +39,20 @@ hi DiagnosticUnderlineWarn                               cterm=undercurl
 hi DiagnosticUnderlineInfo                               cterm=undercurl  guisp=#0087D7
 hi DiagnosticUnderlineHint                               cterm=undercurl
 hi DiagnosticUnderlineOk                                 cterm=undercurl
-
+hi DiagnosticSignError       ctermfg=8     ctermbg=9
+hi DiagnosticSignWarn        ctermfg=8     ctermbg=11
+hi DiagnosticSignInfo        ctermfg=8     ctermbg=12
+hi DiagnosticSignHint        ctermfg=8     ctermbg=7
+hi DiagnosticSignOk          ctermfg=8     ctermbg=10
 
 hi markdownCode              ctermfg=none  ctermbg=15    cterm=none
 hi markdownCodeBlockBg       ctermfg=none  ctermbg=15    cterm=none
+
+sign define DiagnosticSignError  text=E  texthl=DiagnosticSignError  numhl=DiagnosticSignError
+sign define DiagnosticSignWarn   text=W  texthl=DiagnosticSignWarn   numhl=DiagnosticSignWarn
+sign define DiagnosticSignInfo   text=I  texthl=DiagnosticSignInfo   numhl=DiagnosticSignInfo
+sign define DiagnosticSignHint   text=H  texthl=DiagnosticSignHint   numhl=DiagnosticSignHint
+sign define DiagnosticSignOk     text=O  texthl=DiagnosticSignOk     numhl=DiagnosticSignOk
 
 " After highlight clearing, define colors that don't have highlighting.
 if exists("syntax_on")
