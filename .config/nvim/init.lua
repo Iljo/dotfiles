@@ -1,12 +1,23 @@
--- Diagnostic
+----------------
+-- Diagnostic --
+----------------
 
 vim.diagnostic.config({ 
     virtual_text = false,
     update_in_insert = false
 })
 
+-- See `:help vim.diagnostic.*` for documentation on any of the below functions
+vim.keymap.set('n', '<F25>', vim.diagnostic.open_float)
+vim.keymap.set('n', '<space>d', vim.diagnostic.open_float)
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
+vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
 
--- LSP
+
+---------
+-- LSP --
+---------
 
 function git_dirname_or_home(startpath)
     git_dir = vim.fs.dirname(vim.fs.find({'.git'}, { upward = true, limit = 1, path = startpath})[1])
@@ -41,11 +52,21 @@ lspconfig.ltex.setup {
 vim.api.nvim_create_autocmd("LspAttach", {
     callback = function(args)
         print("Attached buffer", args.buf, "to LSP client", args.data.client_id)
+
+        -- Enable completion triggered by <c-x><c-o>
+        vim.bo[args.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
+
+        -- Buffer local mappings.
+        -- See `:help vim.lsp.*` for documentation on any of the below functions
+        local opts = { buffer = args.buf }
+        vim.keymap.set({ 'n', 'v' }, '<M-CR>', vim.lsp.buf.code_action, opts)
     end
 })
 
 
--- Use Vim configuration
+---------------------------
+-- Use Vim configuration --
+---------------------------
 
 vim.cmd('source ~/.config/nvim/vimscript-transition.vim')
 

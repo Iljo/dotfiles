@@ -78,93 +78,6 @@ if !exists(":DiffOrig")
 		  \ | wincmd p | diffthis
 endif
 
-" ---------------------------------------------------------------------------
-" Customisation
-" ---------------------------------------------------------------------------
-" Filetype dection by extension is in ~/.vim/filetype.vim
-
-" set background=light
-colorscheme devlight
-
-set autowrite
-set shiftwidth=4
-set notimeout ttimeout ttimeoutlen=25
-set nowrap
-if $TERMINAL_EMULATOR != "JetBrains-JediTerm" " Maybe read terminal-info for more options
-    " set cursorline
-    set colorcolumn=101
-endif
-
-" file exploration menu settings
-let g:netrw_banner = 0        " remove directions at top of file listing
-let g:netrw_liststyle=3       " tree style listing
-let g:netrw_browse_split = 3  " split horizontal
-let g:netrw_altv = 1
-let g:netrw_winsize=25        " width of window
-let g:netrw_preview=1
-augroup ProjectDrawer autocmd!  autocmd VimEnter * :Vexplore augroup END
-
-" Fix meta-keys for vim and alacritty that doesn't support modifyOtherKeys of level 2. Strangely
-" neovim wirks quite fine in alacritty.
-if !has("nvim") && &term ==? "alacritty"
-    set <M-X>=X
-endif
-
-" Mappings
-" TODO Make different mappings of the same file based on the extension
-" map <M-X> :!groff -mspdf -T pdf % > %:r.pdf <CR>
-map <M-X>       :!pandoc % -V geometry:a4paper --number-sections --top-level-division=chapter --template custom.latex -s -o %:r.tex && lualatex %:r.tex <CR>
-imap <M-X> <Esc>:!pandoc % -V geometry:a4paper --number-sections --top-level-division=chapter --template custom.latex -s -o %:r.tex && lualatex %:r.tex <CR>
-map <F10>       :!pandoc % -V geometry:a4paper --number-sections --top-level-division=chapter --template custom.latex -s -t latex \| pdflatex --jobname=%:r <CR>
-imap <F10> <ESC>:!pandoc % -V geometry:a4paper --number-sections --top-level-division=chapter --template custom.latex -s -t latex \| pdflatex --jobname=%:r <CR>
-
-map K      :lua vim.diagnostic.open_float() <CR>
-map <M-CR> :lua vim.lsp.buf.code_action() <CR>
-
-
-" Set autoindent so that list items longer than 2 lines have forrect
-" indentation
-set ai
-
-" TODO Doesn't work on correctly. Maybe it's xterm or font? In alacritty it works,
-" but is it because it can modify the font?
-" Strange because  printf "\e[3mfoo\e[23m" prints itallic font
-" But neovim in xterm works good with this
-" The problem is my vimrc and setting colorscheme. If it's not set we get bold text.
-set conceallevel=2
-
-" TODO Headding 1 and 2 are not correctly formatted without this one. Why doesnt it work
-" when set in vimrc, only when executed directly. Maybe after this vimrc is
-" executed, vim executes it's own thing depending on the filetype.
-set comments+=n:==,n:--
-
-" Line numbers
-set nu
-set rnu
-
-" Wrapping 
-set nowrap
-set textwidth=100
-set whichwrap+=<,>,h,l
-
-let g:markdown_fenced_languages=['java', 'kotlin', 'sh', 'bash', 'vim']
-
-" Show invisible characters
-set list
-set listchars=tab:»_,trail:·
-
-" Use globalstatusline in NeoVim and always use statusline in Vim.
-" In order for undercurl to work in Vim, setup termcap entries.
-if has("nvim")
-    set laststatus=3
-else
-    set laststatus=2
-    let &t_Cs = "\e[4:3m"
-    let &t_Ce = "\e[4:0m"
-endif
-
-set scrolloff=1
-set signcolumn=no
 
 " ------------
 " - Spelling -
@@ -200,4 +113,67 @@ endfunction
 command CreateCustomSpellDir call s:CreateCustomSpellDir()
 
 au BufEnter * let &l:spellfile=s:CustomSpellFile()
+
+
+" ----------------------------------
+" - File exploration menu settings -
+" ----------------------------------
+
+let g:netrw_banner = 0        " remove directions at top of file listing
+let g:netrw_liststyle=3       " tree style listing
+let g:netrw_browse_split = 3  " split horizontal
+let g:netrw_altv = 1
+let g:netrw_winsize=25        " width of window
+let g:netrw_preview=1
+augroup ProjectDrawer autocmd!  autocmd VimEnter * :Vexplore augroup END
+
+
+" ---------------
+" Customisation -
+" ---------------
+
+colorscheme devlight
+if $TERMINAL_EMULATOR != "JetBrains-JediTerm" " Maybe read terminal-info for more options
+    set colorcolumn=101
+endif
+
+set autowrite
+set notimeout ttimeout ttimeoutlen=25
+
+" Set autoindent so that list items longer than 2 lines have correct indentation
+setlocal ai
+setlocal conceallevel=2
+setlocal scrolloff=1
+setlocal signcolumn=no
+
+" Line numbers
+set nu
+set rnu
+
+" Wrapping and spaces
+setlocal nowrap
+setlocal textwidth=100
+setlocal whichwrap+=<,>,h,l
+setlocal shiftwidth=4
+setlocal expandtab  " Use :retab to convert any tab to spaces
+
+" Show invisible characters
+set list
+set listchars=tab:»_,trail:·
+
+" Use globalstatusline in NeoVim and always use statusline in Vim.
+" In order for undercurl to work in Vim, setup termcap entries.
+if has("nvim")
+    set laststatus=3
+else
+    set laststatus=2
+    let &t_Cs = "\e[4:3m"
+    let &t_Ce = "\e[4:0m"
+endif
+
+" Fix meta-keys for Vim and Alacritty that doesn't support modifyOtherKeys of level 2. Strangely
+" Neovim works quite fine in Alacritty.
+if !has("nvim") && &term ==? "alacritty"
+    set <M-X>=X
+endif
 
