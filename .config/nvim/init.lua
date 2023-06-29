@@ -45,6 +45,10 @@ lspconfig.ltex.setup {
             --       https://github.com/barreiroleo/ltex_extra.nvim/blob/3ceb2401ab70c132305b3dba4dcb418d97b567ad/lua/ltex_extra/init.lua#L7
             --       Maybe this variable should be changed to function
             --       https://github.com/barreiroleo/ltex_extra.nvim/blob/3ceb2401ab70c132305b3dba4dcb418d97b567ad/lua/ltex_extra/utils/fs.lua#L2
+            --       Update: path could also be relative, but it doesn't work for me, I always get
+            --       current working directory for the path. In fs.lua path funtion, root dir should
+            --       be calculated like this maybe:
+            --       require("lspconfig").ltex.get_root_dir(vim.api.nvim_buf_get_name(0))
             path = git_dirname_or_home(vim.api.nvim_buf_get_name(bufnr)) .. "/.spell/ltex" 
         }
     end

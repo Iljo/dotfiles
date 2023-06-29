@@ -40,5 +40,5 @@ call MarkdownBlocks()
 " Setup formatter
 setlocal formatprg=mdformat\ --number\ --wrap\ 100\ -
 
-let g:markdown_fenced_languages=['java', 'kotlin', 'sh', 'bash', 'vim']
+let g:markdown_fenced_languages=['java', 'kotlin', 'sh', 'bash', 'vim', 'output']
 

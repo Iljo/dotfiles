@@ -84,7 +84,7 @@ endif
 " ------------
 
 function s:CustomSpellDirectory() 
-    let git_or_home_dir = finddir('.git/..', expand('%:p:h').';')
+    let git_or_home_dir = finddir('.git/..', fnameescape(expand('%:p:h')).';')
     if len(git_or_home_dir) == 0 | let git_or_home_dir = "~" | endif
     let git_or_home_dir = fnamemodify(git_or_home_dir, ':p')
 
@@ -107,9 +107,13 @@ function s:CreateCustomSpellDir()
     endif
 endfunction
 
+" Caution, don't use comma characters in directory names, as they won't get escaped properly. 
+" spellfile variable doesn's support ampersand characters in files path, so try to avoid root git 
+" directories with it.
+"
 " Not gonna automatically create custom spell directory anymore, don't want that directory to always
 " be present, for every file it's opened. There is no event that is triggered when spelling is
-" activated, or spellfile is missing. So use this command to automatically create needed directory.
+" activated, or spellfile is missing. So use this command to create needed directory.
 command CreateCustomSpellDir call s:CreateCustomSpellDir()
 
 au BufEnter * let &l:spellfile=s:CustomSpellFile()
