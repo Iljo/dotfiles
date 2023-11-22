@@ -32,13 +32,13 @@ colors:
     foreground: '#16230A'
 font:
   Bold:
-    family: JetBrainsMono Nerd Font
+    family: JetBrainsMono NF
     style: ExtraBold
   italic:
-    family: JetBrainsMono Nerd Font
+    family: JetBrainsMono NF
     style: Italic
   normal:
-    family: JetBrainsMono Nerd Font
+    family: JetBrainsMono NF
     style: Medium
   offset:
     x: 0
