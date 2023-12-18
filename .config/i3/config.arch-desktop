@@ -14,13 +14,14 @@ for_window [class="Pidgin"] floating enable
 for_window [class="mpv"] floating enable
 for_window [instance="Godot_Engine"] floating enable
 for_window [instance="LearnOpenGL"] floating enable
+for_window [instance="OpenGL"] floating enable
 
 # class                 border  bground text    indicator child_border
-client.focused          #A6714B #CC7739 #000000 #A6714B   #CC7739
+client.focused          #A6714B #CC7739 #000000 #F64F04   #DD7739
 
-default_border pixel 1
+default_border pixel 2
 default_floating_border pixel 2
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 2
 
 hide_edge_borders smart
 
@@ -42,7 +43,7 @@ font pango:Ubuntu Mono 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec ~/Miscellaneous/Alacritty/target/release/alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
