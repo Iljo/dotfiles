@@ -136,7 +136,12 @@ augroup ProjectDrawer autocmd!  autocmd VimEnter * :Vexplore augroup END
 " Customisation -
 " ---------------
 
-colorscheme devlight
+if !has("nvim")
+    colorscheme devlight
+else
+    set background=light
+endif
+
 if $TERMINAL_EMULATOR != "JetBrains-JediTerm" " Maybe read terminal-info for more options
     set colorcolumn=101
 endif
