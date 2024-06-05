@@ -486,6 +486,23 @@ $endif$
 $if(title)$
 $if(beamer)$
 \frame{\titlepage}
+$elseif(customtitle)$
+\begin{titlepage}
+    \centering
+    $if(announcement)$
+    {\normalsize\bfseries $announcement$ \par}
+    $else$
+    \null
+    $endif$
+    \vfill
+    {\huge\bfseries $title$ \par}
+    \vspace{1cm}
+    {\Large\itshape $author$ \par}
+    \vfill
+    $if(authorofnotes)$
+    {\large\itshape $authorofnotes$ \par}
+    $endif$
+\end{titlepage}
 $else$
 \maketitle
 $endif$
