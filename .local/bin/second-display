@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+# Check that exactly one argument is provided
+if [[ $# -ne 1 ]]; then
+  echo "Usage: $(basename "$0") {on|off}"
+  exit 1
+fi
+
+case "$1" in
+  on)
+    nvidia-settings --assign CurrentMetaMode="HDMI-0: 3840x2160_60 +3840+0 {ForceFullCompositionPipeline=On}, HDMI-1: 3840x2160_60 +0+0 {ForceFullCompositionPipeline=On}" --assign XineramaInfoOrder="HDMI-0"
+    nitrogen --restore
+    xrandr --output HDMI-1 --primary
+    ;;
+  off)
+    nvidia-settings --assign CurrentMetaMode="HDMI-0: 3840x2160_60 +3840+0 {ForceFullCompositionPipeline=On}" --assign XineramaInfoOrder="HDMI-0"
+    xrandr --output HDMI-0 --primary
+    nitrogen --restore
+    ;;
+  *)
+    echo "Invalid argument: $1"
+    echo "Usage: $0 {on|off}"
+    exit 1
+    ;;
+esac
