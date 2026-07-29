@@ -14,6 +14,7 @@ for_window [class="Pidgin"] floating enable
 for_window [class="mpv"] floating enable
 for_window [instance="Godot_Engine"] floating enable
 for_window [instance="LearnOpenGL"] floating enable
+for_window [instance="KmpGl"] floating enable
 for_window [instance="OpenGL"] floating enable
 
 # class                 border  bground text    indicator child_border
